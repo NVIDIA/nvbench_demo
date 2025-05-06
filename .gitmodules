@@ -1,3 +1,0 @@
-[submodule "nvbench"]
-	path = nvbench
-	url = git@github.com:allisonvacanti/nvbench.git

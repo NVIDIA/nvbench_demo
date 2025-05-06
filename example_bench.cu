@@ -9,9 +9,8 @@ __global__ void sleep_kernel(nvbench::int64_t microseconds) {
   const auto target_duration = cuda::std::chrono::microseconds(microseconds);
   const auto finish = start + target_duration;
 
-  auto now = cuda::std::chrono::high_resolution_clock::now();
-  while (now < finish) {
-    now = cuda::std::chrono::high_resolution_clock::now();
+  while (cuda::std::chrono::high_resolution_clock::now() < finish) {
+    // busy wait
   }
 }
 
